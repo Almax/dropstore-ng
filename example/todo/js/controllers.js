@@ -16,6 +16,8 @@ angular.module('testApp.controllers', [])
             .then(function(datastoreManager){
                 console.log('completed authentication');
                 return datastoreManager.openDefaultDatastore();
+            }, function(err){
+                alert('an error occured during authentication.')
             })
             .then(function(datastore){
                 console.log('completed openDefaultDatastore');
